@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Temp\Wyvujal\93054f28a8\DD.OneS.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2933345C-4ED5-4A12-9FB8-460725EC91AC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>DD.OneS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.107</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>DD.OneS</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>True</Private>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Text.Logic" />
+    <Reference Include="Microsoft.VisualStudio.Text.UI" />
+    <Reference Include="Microsoft.VisualStudio.Text.UI.Wpf" />
+    <Reference Include="Microsoft.VisualStudio.Editor" />
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop" />
+    <Reference Include="Microsoft.VisualStudio.Package.LanguageService.12.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.12.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop" />
+    <Reference Include="Microsoft.VisualStudio.Text.Data" />
+    <Reference Include="Microsoft.VisualStudio.CoreUtility" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop" />
+    <Reference Include="System.Core" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.11.0" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classifiers\OneSClassifier.cs" />
+    <Compile Include="Classifiers\OneSClassifierClassificationDefinition.cs" />
+    <Compile Include="Classifiers\OneSClassifierFormat.cs" />
+    <Compile Include="Classifiers\OneSCommentFormat.cs" />
+    <Compile Include="Classifiers\OneSNumberFormat.cs" />
+    <Compile Include="Classifiers\OneSDateFormat.cs" />
+    <Compile Include="Classifiers\OneSKeywordFormat.cs" />
+    <Compile Include="Classifiers\OneSTextFormatDef.cs" />
+    <Compile Include="Classifiers\OneSCodeFormatDef.cs" />
+    <Compile Include="Classifiers\OneSErrorFormatDef.cs" />
+    <Compile Include="Classifiers\OneSClassifierProvider.cs" />
+    <Compile Include="Commands\CommandFilterProvider.cs" />
+    <Compile Include="Commands\EditorCommandFilter.cs" />
+    <Compile Include="Helpers\BufferIdleEventUtil.cs" />
+    <Compile Include="Helpers\OneSLanguageService.cs" />
+    <Compile Include="Helpers\OneSLanguagePackage.cs" />
+    <Compile Include="Helpers\OneSCodeHelper.cs" />
+    <Compile Include="Helpers\OneSTokens.cs" />
+    <Compile Include="Helpers\VSThemeColorHelper.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
